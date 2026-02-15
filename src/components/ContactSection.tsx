@@ -38,13 +38,13 @@ export default function ContactSection() {
                     </svg>
                   </div>
                 </div>
-                <div>
+                <div className="min-w-0">
                   <p className="text-sm font-medium text-dark-500 dark:text-light-300 mb-0.5">
                     Email
                   </p>
                   <a
                     href="mailto:floriana.antonia.pavel@gmail.com"
-                    className="text-base text-dark dark:text-light hover:underline transition duration-200"
+                    className="text-base text-dark dark:text-light hover:underline transition duration-200 break-all"
                   >
                     floriana.antonia.pavel@gmail.com
                   </a>

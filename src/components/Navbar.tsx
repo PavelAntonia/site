@@ -38,7 +38,7 @@ export default function Navbar() {
                 Skills
               </Link>
               <Link href="#highlights" className="px-3 py-2 text-sm text-dark dark:text-light hover:bg-dark-100 dark:hover:bg-light-200">
-                Highlights
+                Awards
               </Link>
               <Link href="#cv" className="px-3 py-2 text-sm text-dark dark:text-light hover:bg-dark-100 dark:hover:bg-light-200">
                 CV
@@ -88,7 +88,7 @@ export default function Navbar() {
               Skills
             </Link>
             <Link href="#highlights" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-base text-dark dark:text-light hover:bg-dark-100 dark:hover:bg-light-200">
-              Highlights
+              Awards
             </Link>
             <Link href="#cv" onClick={() => setIsOpen(false)} className="block px-3 py-2 text-base text-dark dark:text-light hover:bg-dark-100 dark:hover:bg-light-200">
               CV

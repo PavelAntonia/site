@@ -52,7 +52,7 @@ export default function Footer() {
               Skills
             </Link>
             <Link href="#highlights" className="text-dark-500 dark:text-light-300 hover:text-dark dark:hover:text-light hover:underline transition duration-300 focus:outline-none">
-              Highlights
+              Awards
             </Link>
             <Link href="#cv" className="text-dark-500 dark:text-light-300 hover:text-dark dark:hover:text-light hover:underline transition duration-300 focus:outline-none">
               CV

@@ -17,7 +17,7 @@ const skills = [
     ],
   },
   {
-    category: 'Data & Visualization',
+    category: 'Data Analytics',
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
@@ -27,12 +27,13 @@ const skills = [
     ),
     items: [
       { name: 'Power BI', description: 'Dashboards and reporting' },
-      { name: 'Python (Pandas, NumPy, Seaborn)', description: 'Data analysis and automation' },
+      { name: 'Pandas / NumPy / Seaborn', description: 'Data analysis and wrangling' },
       { name: 'ETL', description: 'Data extraction and transformation' },
+      { name: 'Data wrangling', description: 'Cleaning and structuring complex datasets' },
     ],
   },
   {
-    category: 'Software & Tools',
+    category: 'HR Tech & Enterprise Systems',
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
@@ -41,10 +42,11 @@ const skills = [
       </svg>
     ),
     items: [
+      { name: 'SAP ECC', description: 'Core HR data operations and integration' },
       { name: 'SAP SuccessFactors', description: 'HRIS administration and integration' },
       { name: 'ServiceNow', description: 'Workflow and ticketing' },
       { name: 'SharePoint', description: 'Collaboration and content management' },
-      { name: 'Jira', description: 'Project tracking' },
+      { name: 'DMS', description: 'Document management and migration workflows' },
       { name: 'Microsoft Office', description: 'Reporting and documentation' },
     ],
   },
@@ -61,15 +63,18 @@ const skills = [
     ),
     items: [
       { name: 'Python', description: 'Automation and data pipelines' },
+      { name: 'Java', description: 'Backend and enterprise application development' },
       { name: 'Kotlin', description: 'Mobile development' },
       { name: 'Swift', description: 'iOS development' },
       { name: 'SQL', description: 'Queries and data modeling' },
-      { name: 'HTML/CSS/JavaScript', description: 'Web fundamentals' },
+      { name: 'JavaScript', description: 'Application scripting and integration logic' },
       { name: 'RESTful APIs', description: 'Integration patterns' },
+      { name: 'Git', description: 'Version control and branching workflows' },
+      { name: 'GitHub', description: 'Collaboration, reviews, and repository management' },
     ],
   },
   {
-    category: 'DevOps & Methodologies',
+    category: 'AI & Automation',
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <circle cx="6" cy="6" r="3"></circle>
@@ -78,9 +83,9 @@ const skills = [
       </svg>
     ),
     items: [
-      { name: 'Agile (Scrum)', description: 'Iterative delivery' },
-      { name: 'Git', description: 'Version control' },
-      { name: 'GitHub', description: 'Collaboration and reviews' },
+      { name: 'LLM Integration (OpenAI)', description: 'Prompt and context engineering for workflows' },
+      { name: 'LLM Integration (Anthropic)', description: 'Automation support for knowledge tasks' },
+      { name: 'Context engineering', description: 'Structuring task context for reliable outputs' },
     ],
   },
 ];
@@ -95,7 +100,7 @@ export default function SkillsSection() {
           </h2>
           <div className="h-px w-20 bg-dark dark:bg-light mx-auto mb-4" />
           <p className="text-lg text-dark-500 dark:text-light-300 max-w-2xl mx-auto">
-            A comprehensive overview of my technical skills, tools, and methodologies I use to solve complex problems.
+            Technical capabilities across enterprise HR systems, analytics, software development, and AI-assisted automation.
           </p>
         </div>
 

@@ -56,10 +56,10 @@ export default function ProjectsSection() {
     <section id="highlights" className="py-20 bg-light dark:bg-dark">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-14">
-          <h2 className="text-3xl font-bold text-dark dark:text-light mb-2">Highlights</h2>
+          <h2 className="text-3xl font-bold text-dark dark:text-light mb-2">Awards & Publications</h2>
           <div className="h-1 bg-dark dark:bg-light mx-auto mb-4" />
           <p className="text-lg text-dark-600 dark:text-light-300 max-w-2xl mx-auto">
-            Awards and publications that reflect my work across analytics, automation, and research.
+            Selected recognitions and publications that reflect my work across strategy, engineering, and research.
           </p>
         </div>
 
@@ -67,10 +67,10 @@ export default function ProjectsSection() {
           <div className="max-w-md mx-auto">
             <input
               type="text"
-              placeholder="Search highlights..."
+              placeholder="Search awards and publications..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              aria-label="Search highlights"
+              aria-label="Search awards and publications"
               className="w-full px-4 py-2 border border-dark dark:border-light bg-light dark:bg-dark text-dark dark:text-light focus:outline-none"
             />
           </div>
@@ -137,7 +137,7 @@ export default function ProjectsSection() {
         {filteredProjects.length === 0 && (
           <div className="col-span-full text-center py-16">
             <p className="text-dark-500 dark:text-light-400 text-lg">
-              No highlights found matching your criteria.
+              No results found matching your criteria.
             </p>
             <button
               onClick={() => {
