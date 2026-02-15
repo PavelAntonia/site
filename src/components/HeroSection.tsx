@@ -13,9 +13,7 @@ export default function HeroSection() {
               Antonia Pavel
             </h1>
             <p className="text-lg md:text-xl text-dark-500 dark:text-light-300 mb-8">
-              HRIS Analyst with hands-on expertise in systems, automation, and analytics.
-              I bridge HR operations and IT systems through automation, ETL workflows,
-              and API-driven integrations that scale reliably.
+              I operate at the intersection of data, systems, and people, fixing what breaks and optimizing what can work better. Currently also training for a half marathon, which means I have stamina for both long runs and long problem solving sessions. I enjoy building things that last, whether it’s robust system logic or the endurance to cross the finish line.
             </p>
             <div className="flex flex-col sm:flex-row justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
               <button 
@@ -47,15 +45,14 @@ export default function HeroSection() {
                     <span className="text-dark dark:text-light">~</span>$ whoami
                   </p>
                   <p className="mt-2">
-                    HRIS analyst focused on systems integration, automation,
-                    and analytics to scale HR operations and reduce technical debt.
+                    From Monday to Friday, I’m an HRIS Analyst and technical problem solver
                   </p>
                   <p className="mt-4">
                     <span className="text-dark dark:text-light">antonia@dev</span>:
                     <span className="text-dark dark:text-light">~</span>$ skills
                   </p>
                   <p className="mt-2">
-                    Python | SQL | ETL | APIs | SAP SuccessFactors |{" "}
+                    SAP | Python | PBI | APIs | SuccessFactors |{" "}
                     <a className="underline hover:no-underline" href="#skills">
                       Show more
                     </a>
