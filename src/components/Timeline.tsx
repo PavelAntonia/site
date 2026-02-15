@@ -22,16 +22,16 @@ const experiences: Experience[] = [
     period: 'Jun 2022 - Present',
     missions: [
       {
-        name: 'HRIS Integration & Automation',
+        name: 'Systems Integration & Automation',
         description: [
-          'Led end-to-end integration of Intelsat employees into corporate HR and IT systems with accurate SAP data migration',
-          'Coordinated IT and reorg initiatives impacting 2,000+ employees by integrating HR workflows across SAP and SuccessFactors',
-          'Developed an org chart visualization tool, saving ~40 hours per quarter in standard operations and 50+ hours per major reorg',
-          'Engineered Python scripts to automate data cleaning, transformation, deduplication, validation, and integration pipelines',
-          'Designed and implemented ETLs and Power BI dashboards to enhance HR data reporting',
-          'Supported HRIS implementation and troubleshooting with >99% uptime through cross-team collaboration'
+          'Supported end-to-end integration of Intelsat employees into HR systems with SAP data migration, interface synchronization, and validated employee master data',
+          'Supported reorganizations impacting 2,000+ employees by validating org structures and implementing changes across SAP ECC and SAP SuccessFactors',
+          'Built a CLI org chart generator using Python (pandas), JSON payloads, and D3.js static HTML output, saving ~40 hours per quarter and 50+ hours per major reorg',
+          'Migrated 20,000+ employee documents for 1,500+ employees into a DMS, fixing metadata quality issues and improving taxonomy-based mass upload',
+          'Owned end-to-end HR systems operations and delivered Power BI reporting for HR and business decisions',
+          'Developed scripts for data cleaning, deduplication, validation, and integration to reduce manual work and errors'
         ],
-        techStack: ['SAP', 'SuccessFactors', 'Python', 'ETL', 'Power BI']
+        techStack: ['SAP ECC', 'SAP SuccessFactors', 'Python', 'D3.js', 'Power BI', 'ETL']
       }
     ]
   },
@@ -42,30 +42,30 @@ const experiences: Experience[] = [
     period: 'Jan 2022 - Jun 2022',
     missions: [
       {
-        name: 'Operating Model & Process Optimization',
+        name: 'Treasury Process Transformation',
         description: [
-          'Led analytics-backed operating model reviews for Corporate Services with executive-ready reports and benchmarks',
-          'Mapped end-to-end treasury processes, quantified waste and cycle times, and designed centralized workflows reducing redundancy by ~15%',
-          'Partnered with Finance and IT stakeholders to align metrics, governance, and data requirements'
+          'Drove treasury process transformation for a global client across Benelux, centralizing cash flow, risk management, forecasting, and financial reporting',
+          'Led stakeholder interviews and workshops to capture requirements, pain points, and regional differences, aligning teams on a single process vision',
+          'Delivered As-Is/To-Be process documentation, RACI governance, controls inputs, and an implementation roadmap'
         ],
-        techStack: ['Analytics', 'Process Mapping', 'Stakeholder Management']
+        techStack: ['Process Mapping', 'Treasury', 'RACI', 'Stakeholder Management']
       }
     ]
   },
   {
     title: 'Research Assistant',
     company: 'EELISA European University',
-    location: 'Remote',
+    location: 'Remote from Finland',
     period: 'Sep 2021 - Nov 2021',
     missions: [
       {
-        name: 'Ya2ro Research Automation',
+        name: 'Ya2ro Research Object Tooling',
         description: [
-          'Built "ya2ro", an open-source automation tool that converts minimal metadata into fully packaged Research Objects',
-          'Implemented Python-based pipelines and API integrations (DOI, ORCID) to standardize data quality and traceability',
-          'Co-authored a peer-reviewed demo paper and presented outcomes adopted by research teams'
+          'Built ya2ro to convert minimal YAML input (DOIs, ORCIDs, repository URLs, title, summary) into complete Research Objects',
+          'Produced both human-readable HTML and machine-readable JSON-LD outputs aligned with Schema.org terms',
+          'Packaged and published the tool as open source with documentation and distribution via GitHub and PyPI'
         ],
-        techStack: ['Python', 'APIs', 'Research Automation']
+        techStack: ['Python', 'APIs', 'YAML', 'JSON-LD', 'Schema.org']
       }
     ]
   },
@@ -78,11 +78,11 @@ const experiences: Experience[] = [
       {
         name: 'Mobile Banking',
         description: [
-          'Improved Santander Bank’s mobile app by implementing a streamlined user menu and enhancing key modules in Kotlin and Swift',
-          'Delivered features within tight deadlines as part of an Agile team',
-          'Participated in Scrum ceremonies and CI/CD workflows'
+          'Improved Banco Santander mobile app navigation for 5M+ users in Spain by implementing a streamlined user menu',
+          'Enhanced core modules in Kotlin (Android) and Swift (iOS) for consistent cross-platform behavior and improved usability',
+          'Partnered with product, design, backend, and QA to deliver stable releases through implementation, testing, and bug fixing'
         ],
-        techStack: ['Kotlin', 'Swift', 'Agile']
+        techStack: ['Kotlin', 'Swift', 'iOS', 'Android', 'Agile']
       }
     ]
   }

@@ -12,7 +12,7 @@
 
 ## Summary
 
-HRIS Analyst with hands-on expertise in systems, automation, and analytics at SES. Combining my Computer Engineering foundation with practical development experience, I design and implement technical solutions that bridge HR operations and IT systems. I build automation tools using Python and SQL, develop ETL pipelines for data integration, and engineer API-driven workflows that eliminate manual processes. I specialize in system integrations—managing data migration, interface synchronization, and cross-platform connectivity—while delivering scalable solutions that streamline operations and reduce technical debt.
+From Monday to Friday, I’m an HRIS Analyst and technical problem solver, keeping HR systems reliable and turning business requirements into concrete, scalable technical actions. I operate at the intersection of data, systems, and people, fixing what breaks and optimizing what can work better. Outside of work, I recharge by reading, traveling, and staying active, currently training for a half marathon, which means I have stamina for both long runs and long problem solving sessions. I enjoy building things that last, whether it’s robust system logic or the endurance to cross the finish line.
 
 ---
 
@@ -75,10 +75,11 @@ Universidad Politécnica de Madrid, 2017 - 2022
 ## Skills
 
 * **Languages:** Spanish (Native), Romanian (Native), English (Professional)
-* **Data/Visualization:** PowerBi, Python (Pandas, NumPy, Seaborn), ETL
-* **Software/Tools:** SAP SuccessFactors, ServiceNow, SharePoint, Jira, Microsoft Office
-* **Programming:** Python, Kotlin, Swift, SQL, HTML, CSS, JavaScript, RESTful APIs
-* **DevOps/Methodologies:** Agile (Scrum), Git, GitHub
+* **HR Tech & Enterprise Systems:** SAP ECC, SAP SuccessFactors, ServiceNow, SharePoint, Document Management System (DMS), Microsoft Office
+* **Data Analytics:** PowerBi, Pandas, NumPy, Seaborn, ETL, data wrangling,
+* **Programming:** Python, Java, Kotlin, Swift, SQL, JavaScript, RESTful APIs, Git, GitHub
+* **AI & Automation:** LLM Integration (OpenAI, Anthropic, context engineering)
+
 
 ---
 

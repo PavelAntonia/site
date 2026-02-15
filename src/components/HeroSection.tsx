@@ -14,8 +14,8 @@ export default function HeroSection() {
             </h1>
             <p className="text-lg md:text-xl text-dark-500 dark:text-light-300 mb-8">
               HRIS Analyst with hands-on expertise in systems, automation, and analytics.
-              I design data extraction approaches, build Power BI dashboards, and
-              develop Python automation to streamline HR operations.
+              I bridge HR operations and IT systems through automation, ETL workflows,
+              and API-driven integrations that scale reliably.
             </p>
             <div className="flex flex-col sm:flex-row justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
               <button 
@@ -48,14 +48,14 @@ export default function HeroSection() {
                   </p>
                   <p className="mt-2">
                     HRIS analyst focused on systems integration, automation,
-                    and analytics to scale HR operations.
+                    and analytics to scale HR operations and reduce technical debt.
                   </p>
                   <p className="mt-4">
                     <span className="text-dark dark:text-light">antonia@dev</span>:
                     <span className="text-dark dark:text-light">~</span>$ skills
                   </p>
                   <p className="mt-2">
-                    Power BI | Python | SAP SuccessFactors | ETL |{" "}
+                    Python | SQL | ETL | APIs | SAP SuccessFactors |{" "}
                     <a className="underline hover:no-underline" href="#skills">
                       Show more
                     </a>

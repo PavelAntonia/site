@@ -13,7 +13,7 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: "Antonia Pavel | Portfolio",
-  description: "Personal portfolio and CV of Antonia Pavel, HRIS Analyst",
+  description: "Personal portfolio and CV of Antonia Pavel, HRIS Analyst specializing in systems integration, automation, and analytics.",
 };
 
 export default function RootLayout({

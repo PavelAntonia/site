@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import ProjectCard from './ProjectCard';
 
 type Project = {
   title: string;
@@ -22,15 +21,15 @@ export default function ProjectsSection() {
   const projects: Project[] = [
     {
       title: 'National Business Contest – 1st Prize',
-      description: 'Developed and pitched a business model with full financial and market strategy (Spain, 2017).',
+      description: 'Presented ReLeaf Memorial Park: an eco memorialization concept combining one-tree burials with a QR-linked digital legacy platform (Spain, 2017).',
       image: '/projects/award-1.jpg',
-      technologies: ['Award', 'Business Strategy'],
+      technologies: ['Award', 'Business Strategy', 'Sustainability'],
     },
     {
       title: 'Hackathon (BEST/AXA) – 1st Prize',
-      description: 'Led a team to build a full-stack solution for a real-world AXA business case (Spain, 2021).',
+      description: 'Built a one-day full-stack app to manage AXA healthcare provider networks, including providers, health centers, doctors, and medical network configurations (Spain, 2021).',
       image: '/projects/award-2.jpg',
-      technologies: ['Award', 'Full-stack'],
+      technologies: ['Award', 'Full-stack', 'JHipster', 'Java', 'MongoDB', 'React'],
     },
     {
       title: 'Publication: Ya2ro (Demo Paper)',
@@ -40,8 +39,6 @@ export default function ProjectsSection() {
       technologies: ['Publication', 'Research'],
     },
   ];
-
-  const allTechnologies = projects.flatMap((project) => project.technologies);
 
   const filteredProjects = projects.filter((project) => {
     const matchesFilter = activeFilter === 'All' || project.technologies.includes(activeFilter);
