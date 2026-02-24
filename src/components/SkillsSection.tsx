@@ -73,21 +73,6 @@ const skills = [
       { name: 'GitHub', description: 'Collaboration, reviews, and repository management' },
     ],
   },
-  {
-    category: 'AI & Automation',
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="6" cy="6" r="3"></circle>
-        <circle cx="6" cy="18" r="3"></circle>
-        <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
-      </svg>
-    ),
-    items: [
-      { name: 'LLM Integration (OpenAI)', description: 'Prompt and context engineering for workflows' },
-      { name: 'LLM Integration (Anthropic)', description: 'Automation support for knowledge tasks' },
-      { name: 'Context engineering', description: 'Structuring task context for reliable outputs' },
-    ],
-  },
 ];
 
 export default function SkillsSection() {

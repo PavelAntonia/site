@@ -7,13 +7,13 @@ export default function HeroSection() {
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div className="text-center md:text-left">
             <div className="inline-block border border-dark-300 dark:border-light-300 px-3 py-1 text-sm text-dark dark:text-light mb-4">
-              HRIS Analyst
+              print(¨hello world!¨)
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-normal text-dark dark:text-light mb-4 leading-tight">
               Antonia Pavel
             </h1>
             <p className="text-lg md:text-xl text-dark-500 dark:text-light-300 mb-8">
-              I operate at the intersection of data, systems, and people, fixing what breaks and optimizing what can work better. Currently also training for a half marathon, which means I have stamina for both long runs and long problem solving sessions. I enjoy building things that last, whether it’s robust system logic or the endurance to cross the finish line.
+              I lead operations at the intersection of data, systems, and people, driving clarity in complex environments and transforming daily operational challenges into scalable, high-impact solutions. Currently also training for a half marathon, which means I have stamina for both long runs and long problem solving sessions. I enjoy building things that last, whether it’s robust system logic or the endurance to cross the finish line.
             </p>
             <div className="flex flex-col sm:flex-row justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
               <button 
