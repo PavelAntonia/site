@@ -1,8 +1,8 @@
 # ---- Builder ----
-FROM node:23-slim AS builder
+FROM node:24.22.1-bookworm-slim AS builder
 
 # Enable pnpm via Corepack
-RUN corepack enable && corepack prepare pnpm@latest --activate
+RUN npm install -g pnpm@10.33.0
 
 # Set working directory
 WORKDIR /app
@@ -20,26 +20,28 @@ COPY . .
 RUN pnpm build
 
 # ---- Runner ----
-FROM node:23-slim AS runner
+FROM node:24.22.1-bookworm-slim AS runner
 
 # Install curl and Chromium for Puppeteer
 RUN apt-get update && \
-    apt-get install -y curl chromium && \
+    apt-get install -y --no-install-recommends curl chromium ca-certificates fonts-liberation && \
     rm -rf /var/lib/apt/lists/*
 
 ENV PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium
 
 # Enable pnpm via Corepack (for running, not building)
-RUN corepack enable && corepack prepare pnpm@latest --activate
+RUN npm install -g pnpm@10.33.0
 
 WORKDIR /app
 
 # Only copy the necessary files for running the app
-COPY --from=builder /app/package.json ./
-COPY --from=builder /app/pnpm-lock.yaml ./
-COPY --from=builder /app/.next ./.next
-COPY --from=builder /app/public ./public
-COPY --from=builder /app/node_modules ./node_modules
+COPY --chown=node:node --from=builder /app/package.json ./
+COPY --chown=node:node --from=builder /app/pnpm-lock.yaml ./
+COPY --chown=node:node --from=builder /app/.next ./.next
+COPY --chown=node:node --from=builder /app/public ./public
+COPY --chown=node:node --from=builder /app/node_modules ./node_modules
+
+USER node
 
 EXPOSE 3000
 

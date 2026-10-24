@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import puppeteer from 'puppeteer';
+import puppeteer from 'puppeteer-core';
 import fs from 'fs/promises';
 import path from 'path';
 import { remark } from 'remark';
@@ -75,6 +75,8 @@ async function generatePdfFromMarkdown(markdown: string): Promise<Uint8Array> {
   const completeHtml = renderHtmlFromMarkdown(htmlContent);
   const browser = await puppeteer.launch({
     headless: true,
+    executablePath: process.env.PUPPETEER_EXECUTABLE_PATH || '/usr/bin/chromium',
+    timeout: 30_000,
     args: [
       '--no-sandbox',
       '--disable-setuid-sandbox',
@@ -86,20 +88,32 @@ async function generatePdfFromMarkdown(markdown: string): Promise<Uint8Array> {
       '--disable-gpu'
     ],
   });
-  const page = await browser.newPage();
-  await page.setContent(completeHtml, { waitUntil: 'networkidle0', timeout: 30_000 });
-  const pdfBuffer = await page.pdf({
-    format: 'A4',
-    printBackground: true,
-    margin: {
-      top: '10mm',
-      right: '10mm',
-      bottom: '10mm',
-      left: '10mm',
-    }
-  });
-  await browser.close();
-  return pdfBuffer;
+  try {
+    const page = await browser.newPage();
+    await page.setJavaScriptEnabled(false);
+    await page.setRequestInterception(true);
+    page.on('request', request => {
+      if (request.url().startsWith('data:') || request.url() === 'about:blank') {
+        void request.continue();
+      } else {
+        void request.abort();
+      }
+    });
+    await page.setContent(completeHtml, { waitUntil: 'load', timeout: 30_000 });
+    const pdfBuffer = await page.pdf({
+      format: 'A4',
+      printBackground: true,
+      margin: {
+        top: '10mm',
+        right: '10mm',
+        bottom: '10mm',
+        left: '10mm',
+      }
+    });
+    return pdfBuffer;
+  } finally {
+    await browser.close();
+  }
 }
 
 export async function GET() {
@@ -107,7 +121,7 @@ export async function GET() {
     const mdFilePath = path.join(process.cwd(), 'public', 'antonia_cv.md');
     const markdownContent = await fs.readFile(mdFilePath, 'utf-8');
     const pdfBuffer = await generatePdfFromMarkdown(markdownContent);
-    return new NextResponse(pdfBuffer, {
+    return new NextResponse(new Uint8Array(pdfBuffer).buffer, {
       headers: {
         'Content-Type': 'application/pdf',
         'Content-Disposition': 'attachment; filename="Antonia Pavel - CV.pdf"',
@@ -132,7 +146,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Markdown is too large' }, { status: 413 });
     }
     const pdfBuffer = await generatePdfFromMarkdown(markdown);
-    return new NextResponse(pdfBuffer, {
+    return new NextResponse(new Uint8Array(pdfBuffer).buffer, {
       headers: {
         'Content-Type': 'application/pdf',
         'Content-Disposition': 'attachment; filename="Antonia Pavel - CV.pdf"',
